@@ -3,10 +3,10 @@ CC ?= cc
 LDFLAGS = -lX11
 
 output: dwmblocks.c blocks.h
-	${CC}  dwmblocks.c $(LDFLAGS) -o dwmblocks
+	${CC} dwmblocks.c $(LDFLAGS) -o dwmblocks
 
 clean:
-	rm -f *.o *.gch dwmblocks
+	rm -f *.o *.gch dwmblocks *.orig *.rej
 
 install: output
 	mkdir -p $(DESTDIR)$(PREFIX)/bin
