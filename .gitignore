@@ -1,0 +1,4 @@
+.gitignore
+*.orig
+*.rej
+dwmblocks
