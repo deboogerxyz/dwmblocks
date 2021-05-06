@@ -2,7 +2,7 @@ PREFIX ?= /usr/local
 CC ?= cc
 LDFLAGS = -lX11
 
-output: dwmblocks.c blocks.h
+output: dwmblocks.c config.h
 	${CC} dwmblocks.c $(LDFLAGS) -o dwmblocks
 
 clean:

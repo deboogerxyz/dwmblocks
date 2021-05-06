@@ -48,7 +48,7 @@ static void (*writestatus) () = pstdout;
 #endif
 
 
-#include "blocks.h"
+#include "config.h"
 
 static char statusbar[LENGTH(blocks)][CMDLENGTH] = {0};
 static char statusstr[2][STATUSLENGTH];
@@ -73,7 +73,7 @@ void getcmd(const Block *block, char *output)
 	if (delim[0] != '\0') {
 		//only chop off newline if one is present at the end
 		i = output[i-1] == '\n' ? i-1 : i;
-		strncpy(output+i, delim, delimLen); 
+		strncpy(output+i, delim, delimLen);
 	}
 	else
 		output[i++] = '\0';
@@ -211,3 +211,4 @@ int main(int argc, char** argv)
 #endif
 	return 0;
 }
+
